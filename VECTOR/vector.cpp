@@ -213,3 +213,286 @@
 //     return 0;
 // }
 
+// ! Vector empty() and front()
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+// vector<int> vec = {1, 2, 3, 4, 5};
+
+//     if(!vec.empty())
+//     {
+//         cout << vec.front();
+//     }
+//     else
+//     {
+//         cout << "vector is empty";
+//     }
+
+//    return 0;
+// }
+
+// ! vector operator
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+
+//     cout << vec[2] << endl;
+//     vec[2] = 100;
+//     for(auto val: vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+
+// }
+
+// ! Vector front() in C++ STL
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+
+//     // changeing the value
+//     vec.front() = 100;
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! vector push_back
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     vec.push_back(100);
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+//     return 0;
+// }
+
+//  ! for string
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<string> vec = {"Good", "Day"};
+
+//     vec.push_back("Guys");
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! Vector insert()
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     // at the giveing position
+//     vec.insert(vec.begin() + 3, 100);
+
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! insert the 2nd vector in 1st one
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     vector<int> vec2 = {7, 8, 9, 10};
+
+//     vec.insert(vec.begin() + 4, vec2.begin(), vec2.end());
+
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// !  emplace
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+
+//     vec.emplace(vec.begin() + 1, 100);
+//     vec.emplace(vec.end(), 200);
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! Vector assign() in C++ STL
+//? used to assign the new values to the given vector by replacing old ones.
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec;
+
+//     // size , all elements
+//     vec.assign(5, 20);
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! Assign New Values to Vector from Initializer List
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> v{5, 7, 8, 6, 9};
+
+//     // Assining values using initializer list
+//     v.assign({1, 2, 3});
+
+//     for (auto i : v)
+//         cout << i << " ";
+//     return 0;
+// }
+
+// !  Assign Values to Vector from Another Container
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec1 = {1, 2, 3, 4, 5};
+//     vector<int> vec2;
+//     int arr[] = {10, 20, 30, 40};
+
+//     vec2.assign(arr, arr + 2);
+//     vec1.assign(vec2.begin(), vec2.end());
+
+//     for (auto val1 : vec1)
+//     {
+//         cout << val1 << " ";
+//     }
+//     cout << endl;
+//     for (auto val2 : vec2)
+//     {
+//         cout << val2 << " ";
+//     }
+
+//     return 0;
+// }
+
+// ! Vector erase() in C++ STL
+
+// ? It removes an element of a specific position
+// ? or range of elements from the vector.
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void eraseOneSingleElement(vector<int> &vec) // pass by reference
+// {
+//     if (vec.size() > 1)
+//     {
+//         // Remove single element
+//         vec.erase(vec.begin() + 1); // erase = 2
+//     }
+//     else
+//     {
+//         cout << "Vector size is not greater than 1\n";
+//     }
+// }
+
+// void eraseLastElement(vector<int> &vec) // pass by reference
+// {
+//     if (!vec.empty())
+//     {
+//         // Remove last element
+//         vec.erase(vec.end() - 1); // erase = 10
+//     }
+//     else
+//     {
+//         cout << "Vector is empty\n";
+//     }
+// }
+
+// void eraseInTheRangeOfElement(vector<int> &vec) // pass by reference
+// {
+//     // Remove elements in the range [3,6)
+//     if (vec.size() > 6)
+//     {
+//         vec.erase(vec.begin() + 3, vec.begin() + 6); // 4,5,6,
+//     }
+//     else
+//     {
+//         cout << "Vector size is not greater than 6\n";
+//     }
+// }
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+//     cout << "Elements after erase in the vector: ";
+//     eraseOneSingleElement(vec);
+//     eraseLastElement(vec);
+//     eraseInTheRangeOfElement(vec);
+
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+
+//     return 0;
+// }
