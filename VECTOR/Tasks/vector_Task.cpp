@@ -1,5 +1,5 @@
 
-// // * =======================  Task  =================================================================================
+// * ---------------------------------  Task 1 ----------------------------------------------------------------------------------------
 // /*
 // Task:
 // Write a C++ program that demonstrates the difference between emplace and emplace_back when inserting elements into a vector.
@@ -72,7 +72,7 @@
 //     return 0;
 // }
 
-//* Question :
+//* ----------------------------------- Task 2 ----------------------------------------------------------------------------------------
 /*
 
 You have a vector of integers: {10, 20, 30, 40, 50}.
@@ -89,129 +89,130 @@ Constraints:
 - Consider edge cases where insert() or erase() might exceed valid indices.
 
  */
-#include <iostream>
-#include <vector>
-using namespace std;
 
-void display(vector<int> &vec)
-{
-    for (auto val : vec)
-    {
-        cout << val << " ";
-    }
-    cout << endl;
-}
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-void UsingPushBackAddElements(vector<int> &vec)
-{
-    cout << "Vector Before Insertion 60,70: ";
-    display(vec);
+// void display(vector<int> &vec)
+// {
+//     for (auto val : vec)
+//     {
+//         cout << val << " ";
+//     }
+//     cout << endl;
+// }
 
-    if (!vec.empty())
-    {
-        vec.push_back(60);
-        vec.push_back(70);
-    }
-    else
-    {
-        cout << "Vector is empty\n";
-    }
+// void UsingPushBackAddElements(vector<int> &vec)
+// {
+//     cout << "Vector Before Insertion 60,70: ";
+//     display(vec);
 
-    cout << "Vector After Insertion 60,70: ";
-    display(vec);
-}
+//     if (!vec.empty())
+//     {
+//         vec.push_back(60);
+//         vec.push_back(70);
+//     }
+//     else
+//     {
+//         cout << "Vector is empty\n";
+//     }
 
-void insertElement(vector<int> &vec)
-{
-    cout << "Vector Before Insert 25 at second position: ";
-    display(vec);
+//     cout << "Vector After Insertion 60,70: ";
+//     display(vec);
+// }
 
-    if (!vec.empty())
-    {
-        vec.insert(vec.begin() + 1, 25);
-    }
-    else
-    {
-        cout << "Vector is empty\n";
-    }
+// void insertElement(vector<int> &vec)
+// {
+//     cout << "Vector Before Insert 25 at second position: ";
+//     display(vec);
 
-    cout << "Vector After Insert 25 at second position: ";
-    display(vec);
-}
+//     if (!vec.empty())
+//     {
+//         vec.insert(vec.begin() + 1, 25);
+//     }
+//     else
+//     {
+//         cout << "Vector is empty\n";
+//     }
 
-void addElementUsingEmplace(vector<int> &vec)
-{
-    cout << "Vector Before Adding 35 between 30 and 40: ";
-    display(vec);
+//     cout << "Vector After Insert 25 at second position: ";
+//     display(vec);
+// }
 
-    if (!vec.empty() && vec.size() > 4)
-    {
-        vec.emplace(vec.begin() + 4, 35);
-    }
-    else
-    {
-        cout << "Vector does not have enough elements to safely insert 35\n";
-    }
+// void addElementUsingEmplace(vector<int> &vec)
+// {
+//     cout << "Vector Before Adding 35 between 30 and 40: ";
+//     display(vec);
 
-    cout << "Vector After Adding 35 between 30 and 40: ";
-    display(vec);
-}
+//     if (!vec.empty() && vec.size() > 4)
+//     {
+//         vec.emplace(vec.begin() + 4, 35);
+//     }
+//     else
+//     {
+//         cout << "Vector does not have enough elements to safely insert 35\n";
+//     }
 
-void assignNewValueToVector(vector<int> &vec)
-{
-    cout << "Vector Before Assigning New Values: ";
-    display(vec);
+//     cout << "Vector After Adding 35 between 30 and 40: ";
+//     display(vec);
+// }
 
-    vec.assign({100, 200, 300});
+// void assignNewValueToVector(vector<int> &vec)
+// {
+//     cout << "Vector Before Assigning New Values: ";
+//     display(vec);
 
-    cout << "Vector After Assigning New Values: ";
-    display(vec);
-}
+//     vec.assign({100, 200, 300});
 
-void eraseLastElement(vector<int> &vec)
-{
-    cout << "Vector Before Erasing Last Element: ";
-    display(vec);
+//     cout << "Vector After Assigning New Values: ";
+//     display(vec);
+// }
 
-    if (!vec.empty())
-    {
-        vec.erase(vec.end() - 1);
-    }
-    else
-    {
-        cout << "Vector is empty\n";
-    }
+// void eraseLastElement(vector<int> &vec)
+// {
+//     cout << "Vector Before Erasing Last Element: ";
+//     display(vec);
 
-    cout << "Vector After Erasing Last Element: ";
-    display(vec);
-}
+//     if (!vec.empty())
+//     {
+//         vec.erase(vec.end() - 1);
+//     }
+//     else
+//     {
+//         cout << "Vector is empty\n";
+//     }
 
-void checkVectorIsEmpty(vector<int> &vec)
-{
-    cout << "Checking Vector Status: ";
-    if (vec.empty())
-    {
-        cout << "Vector is empty\n";
-    }
-    else
-    {
-        cout << "Vector is NOT empty\n";
-    }
-}
+//     cout << "Vector After Erasing Last Element: ";
+//     display(vec);
+// }
 
-int main()
-{
-    vector<int> vec = {10, 20, 30, 40, 50};
+// void checkVectorIsEmpty(vector<int> &vec)
+// {
+//     cout << "Checking Vector Status: ";
+//     if (vec.empty())
+//     {
+//         cout << "Vector is empty\n";
+//     }
+//     else
+//     {
+//         cout << "Vector is NOT empty\n";
+//     }
+// }
 
-    cout << "Vector Initially: ";
-    display(vec);
+// int main()
+// {
+//     vector<int> vec = {10, 20, 30, 40, 50};
 
-    UsingPushBackAddElements(vec);
-    insertElement(vec);
-    addElementUsingEmplace(vec);
-    assignNewValueToVector(vec); // Resets vector completely
-    eraseLastElement(vec);
-    checkVectorIsEmpty(vec);
+//     cout << "Vector Initially: ";
+//     display(vec);
 
-    return 0;
-}
+//     UsingPushBackAddElements(vec);
+//     insertElement(vec);
+//     addElementUsingEmplace(vec);
+//     assignNewValueToVector(vec); // Resets vector completely
+//     eraseLastElement(vec);
+//     checkVectorIsEmpty(vec);
+
+//     return 0;
+// }
