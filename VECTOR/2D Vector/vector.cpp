@@ -320,3 +320,87 @@
 
 //     return 0;
 // }
+
+// // ! passing vector to a fucntion by value
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void display(vector<int> vec)
+// {
+//     for (auto i : vec)
+//         cout << i << " ";
+//     cout << endl;
+// }
+// void foo(vector<int> vec)
+// {
+//     vec.push_back(100);
+//     display(vec);
+// }
+
+// int main()
+// {
+//     // The vector inside the function got one more element
+//     // while the original vector remained unchanged even after the function execution.
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     display(vec);
+//     foo(vec);
+//     display(vec);
+
+//     return 0;
+// }
+
+// ! Pass Vector by Reference
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void display(vector<int>& vec)
+// {
+//     for (auto i : vec)
+//         cout << i << " ";
+//     cout << endl;
+// }
+// void foo(vector<int>&vec)
+// {
+//     vec.push_back(100);
+//     display(vec);
+// }
+
+// int main()
+// {
+//     // Explanation: The function modified the original vector as we can see in the output.
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     display(vec);
+//     foo(vec);
+//     display(vec);
+
+//     return 0;
+// }
+
+// ! Pass Vector by Pointer
+// #include <iostream>
+// #include <vector>
+
+// using namespace std;
+
+// void foo(vector<int> *ptr)
+// {
+
+//     ptr->push_back(100);
+//     for (int i = 0; i < ptr->size(); i++)
+//     {
+//         cout << ptr->at(i) << " ";
+//     }
+//     cout << endl;
+// }
+
+// int main()
+// {
+//     // Explanation: The function modified the original vector as we can see in the output.
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     foo(&vec);
+
+//     return 0;
+// }
