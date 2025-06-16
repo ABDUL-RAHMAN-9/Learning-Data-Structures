@@ -216,3 +216,128 @@ Constraints:
 
 //     return 0;
 // }
+
+//* ------------------------------------------------- Task 3 ----------------------------------------------------------------------------------------
+
+/*
+Task: Matrix Manipulation Using Vector Operations
+Implement a program that performs operations on a 2D vector (matrix) using the methods.
+- Initialize a 2D vector with given dimensions.
+- Check if it's empty using .empty().
+- Access the first row’s first element using .front().
+- Add a row dynamically using .push_back().
+- Insert a new element in a specific position using .insert().
+- Emplace an element at the end of a selected row using .emplace_back().
+- Modify an entire row using .assign().
+- Remove an element using .erase().
+*/
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// void display(vector<vector<int>> &vec)
+// {
+//     for (auto i : vec)
+//     {
+//         for (auto j : i)
+//         {
+//             cout << j << " ";
+//         }
+//         cout << endl;
+//     }
+//     cout << endl;
+// }
+// void getFrontElement(vector<vector<int>> &vec)
+
+// {
+//     if (!vec.empty())
+//     {
+//         cout << "Fornt element : " << vec.front().front() << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+// void addRow(vector<vector<int>> &vec)
+// {
+//     if (!vec.empty())
+//     {
+//         vec.push_back({10, 11, 12});
+//         cout << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+
+// void insertElement(vector<vector<int>> &vec)
+// {
+//     if (!vec.empty())
+//     {
+//         vec[0].insert(vec[0].begin() + 2, 44);
+//         cout << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+// void emplaceAtLast(vector<vector<int>> &vec)
+// {
+//     if (!vec.empty())
+//     {
+//         vec[1].emplace_back(30);
+//         cout << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+
+// void modifyVector(vector<vector<int>> &vec)
+// {
+//     if (!vec.empty())
+//     {
+//         vec[2].assign({10, 20, 30, 40, 50, 60});
+//         cout << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+
+// void removeElement(vector<vector<int>> &vec)
+// {
+//     if (!vec.empty())
+//     {
+//         vec[3].erase(vec[3].begin() + 2);
+//         cout << endl;
+//     }
+//     else
+//     {
+//         cout << "Vector is empty!";
+//     }
+// }
+
+// int main()
+// {
+//     vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+//     getFrontElement(vec);
+//     addRow(vec);
+//     insertElement(vec);
+//     emplaceAtLast(vec);
+//     modifyVector(vec);
+//     removeElement(vec);
+//     display(vec);
+
+//     return 0;
+// }
+
+
