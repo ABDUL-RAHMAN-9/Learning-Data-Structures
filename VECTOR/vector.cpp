@@ -496,3 +496,80 @@
 
 //     return 0;
 // }
+
+// ! iterator
+
+// #include <iostream>
+// #include <vector>
+
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     vector<int>::iterator it;
+//     for (it = vec.begin(); it != vec.end(); it++)
+//     {
+//         cout << *(it) << " ";
+//     }
+
+//     cout << endl;
+//     cout << "Reversed Iterator:" << endl;
+//     vector<int>::reverse_iterator itr;
+//     for (itr = vec.rbegin(); itr != vec.rend(); itr++)
+//     {
+//         cout << *(itr) << " ";
+//     }
+//     return 0;
+// }
+
+// !
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+
+// using namespace std;
+// bool comparator(pair<int, int> p1, pair<int, int> p2)
+// {
+//     if (p1.second < p2.second)
+//         return true;
+//     if (p1.second > p2.second)
+//         return false;
+
+//     if (p1.first < p2.first)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+// int main()
+// {
+//     vector<pair<int, int>> vec = {{8, 1}, {3, 1}, {1, 4}};
+
+//     vec.push_back({6, 1});
+//     vec.emplace_back(10, 9);
+//     cout << "Sorted ordr:" << endl;
+
+//     sort(vec.begin(), vec.end(), comparator);
+
+//     for (pair<int, int> val : vec)
+//     {
+//         cout << val.first << ": " << val.second << endl;
+//     }
+
+//     cout << endl;
+//     cout << "Reversed ordr:" << endl;
+//     reverse(vec.begin(), vec.end());
+
+//     for (pair<int, int> val : vec)
+//     {
+//         cout << val.first << ": " << val.second << endl;
+//     }
+
+//     return 0;
+// }

@@ -1,15 +1,15 @@
 
 // * ---------------------------------  Task 1 ----------------------------------------------------------------------------------------
-// /*
-// Task:
-// Write a C++ program that demonstrates the difference between emplace and emplace_back when inserting elements into a vector.
-// Ensure you:
-// - Add at least three different elements using emplace_back.
-// - Insert an element at a specific position using emplace.
-// - Display the vector contents before and after insertion.
-// - Handle edge cases where an element might be inserted at the beginning or end of the vector.
+/*
+Task:
+Write a C++ program that demonstrates the difference between emplace and emplace_back when inserting elements into a vector.
+Ensure you:
+- Add at least three different elements using emplace_back.
+- Insert an element at a specific position using emplace.
+- Display the vector contents before and after insertion.
+- Handle edge cases where an element might be inserted at the beginning or end of the vector.
 
-// */
+*/
 
 // #include <iostream>
 // #include <vector>
@@ -340,4 +340,4 @@ Implement a program that performs operations on a 2D vector (matrix) using the m
 //     return 0;
 // }
 
-
+// *------------------------------------ Task 4 -----------------------------------------------------------------------
