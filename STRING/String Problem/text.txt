@@ -1,0 +1,16 @@
+📜 Problem Statement:
+Given a string s, perform the following operations in sequence:
+
+Remove all non-alphanumeric characters and convert the string to lowercase.
+➝ (String manipulation)
+
+Check whether the resulting string is a palindrome.
+➝ (Two pointers or stack based palindrome check)
+
+Find the longest substring without repeating characters.
+➝ (Sliding window + hash set)
+
+Check whether the string is an anagram of the word "leetcode".
+➝ (Hash map frequency count)
+
+Return the result in the following format:
