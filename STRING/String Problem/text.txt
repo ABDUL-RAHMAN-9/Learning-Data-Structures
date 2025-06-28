@@ -13,4 +13,10 @@ Find the longest substring without repeating characters.
 Check whether the string is an anagram of the word "leetcode".
 ➝ (Hash map frequency count)
 
+
 Return the result in the following format:
+{
+  "is_palindrome": true/false,
+  "longest_unique_substring_length": number,
+  "is_anagram_of_leetcode": true/false
+}
