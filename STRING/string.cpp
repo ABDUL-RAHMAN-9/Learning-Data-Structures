@@ -163,5 +163,31 @@
 //     return 0;
 // }
 
-
 // ! Problem check if palandrome
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool checkPalindrome(string &s1)
+{
+    int st = 0, end = s1.length() - 1;
+
+    while (st < end)
+    {
+        if (s1[st] != s1[end])
+        {
+            return false;
+        }
+        st++;
+        end--;
+    }
+    return true;
+}
+
+int main()
+{
+    string s1 = "abba";
+    cout << (checkPalindrome(s1) ? "true" : "false");
+
+    return 0;
+}
