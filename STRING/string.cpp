@@ -164,30 +164,71 @@
 // }
 
 // ! Problem check if palandrome
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// bool checkPalindrome(string &s1)
+// {
+//     int st = 0, end = s1.length() - 1;
+
+//     while (st < end)
+//     {
+//         if (s1[st] != s1[end])
+//         {
+//             return false;
+//         }
+//         st++;
+//         end--;
+//     }
+//     return true;
+// }
+
+// int main()
+// {
+//     string s1 = "abba";
+//     cout << (checkPalindrome(s1) ? "true" : "false");
+
+//     return 0;
+// }
+
+// ! Substring Reverse Pattern
+
 #include <iostream>
 #include <string>
 using namespace std;
 
-bool checkPalindrome(string &s1)
+void printPattern(char s[], int n)
 {
-    int st = 0, end = s1.length() - 1;
+    cout << s << endl;
 
-    while (st < end)
+    int i = 0, j = n - 2;
+    while (i < j)
     {
-        if (s1[st] != s1[end])
-        {
-            return false;
-        }
-        st++;
-        end--;
+        char c = s[i];
+        s[i] = s[j];
+        s[j] = c;
+        i++;
+        j--;
     }
-    return true;
+
+    i = 0;
+    j = n - 2;
+    while (j - i > 1)
+    {
+        s[i] = s[j] = '*';
+        cout << s << endl;
+        i++;
+        j--;
+    }
 }
 
 int main()
 {
-    string s1 = "abba";
-    cout << (checkPalindrome(s1) ? "true" : "false");
+    char ch[] = "Roman";
+    int n = sizeof(ch) / sizeof(ch[0]);
+
+    printPattern(ch, n);
 
     return 0;
 }
