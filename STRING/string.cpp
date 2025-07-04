@@ -194,41 +194,75 @@
 
 // ! Substring Reverse Pattern
 
-#include <iostream>
-#include <string>
-using namespace std;
+// #include <iostream>
+// #include <string>
+// using namespace std;
 
-void printPattern(char s[], int n)
-{
-    cout << s << endl;
+// void printPattern(char s[], int n)
+// {
+//     cout << s << endl;
 
-    int i = 0, j = n - 2;
-    while (i < j)
-    {
-        char c = s[i];
-        s[i] = s[j];
-        s[j] = c;
-        i++;
-        j--;
-    }
+//     int i = 0, j = n - 2;
+//     while (i < j)
+//     {
+//         char c = s[i];
+//         s[i] = s[j];
+//         s[j] = c;
+//         i++;
+//         j--;
+//     }
 
-    i = 0;
-    j = n - 2;
-    while (j - i > 1)
-    {
-        s[i] = s[j] = '*';
-        cout << s << endl;
-        i++;
-        j--;
-    }
-}
+//     i = 0;
+//     j = n - 2;
+//     while (j - i > 1)
+//     {
+//         s[i] = s[j] = '*';
+//         cout << s << endl;
+//         i++;
+//         j--;
+//     }
+// }
 
-int main()
-{
-    char ch[] = "Roman";
-    int n = sizeof(ch) / sizeof(ch[0]);
+// int main()
+// {
+//     char ch[] = "Roman";
+//     int n = sizeof(ch) / sizeof(ch[0]);
 
-    printPattern(ch, n);
+//     printPattern(ch, n);
 
-    return 0;
-}
+//     return 0;
+// }
+
+// // ! Insert a character in String at a Given Position
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// string insertChar(string &str, char value, int pos)
+// {
+//     str.insert(str.begin() + pos, value);
+// }
+
+// void display(string &str)
+// {
+//     for (auto val : str)
+//     {
+//         cout << val;
+//     }
+// }
+
+// int main()
+// {
+//     string str = "String";
+
+//     cout << "Before insertion: ";
+//     display(str);
+//     cout << endl;
+
+//     cout << "After insertion: ";
+//     insertChar(str, 'A', 3);
+//     display(str);
+
+//     return 0;
+// }
