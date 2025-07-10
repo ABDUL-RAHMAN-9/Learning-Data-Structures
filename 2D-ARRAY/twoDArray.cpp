@@ -267,4 +267,38 @@
 //     return 0;
 // }
 
+// // ! Diagonal Matrix sum
+// //* Primary and Secondary
 
+// #include <iostream>
+// using namespace std;
+
+// int diagonalSum(int matrix[][4], int n)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+
+//         sum += matrix[i][i]; // Adds the primary diagonal element at (i, i).
+
+//         if (i != n - i - 1) // Avoids double counting middle element in odd n.
+//         {
+//             sum += matrix[i][n - i - 1];
+//         }
+//     }
+//     return sum;
+// }
+
+// int main()
+// {
+//     int matrix[4][4] = {
+//         {1, 2, 3, 4},
+//         {5, 6, 7, 8},
+//         {9, 10, 11, 12},
+//         {13, 14, 15, 16}};
+
+//     int n = 4;
+//     cout << "Diagonal Matrix :" << diagonalSum(matrix, n) << endl;
+
+//     return 0;
+// }
