@@ -110,3 +110,36 @@
 
 //     return 0;
 // }
+
+// ! getting input in 2D matrix
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int matrix[4][3];
+//     int rows = 4;
+//     int col = 3;
+
+//     cout << "Enter Matrix elements : ";
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             cin >> matrix[i][j];
+//         }
+//     }
+
+//     cout << "Your entered:" << endl;
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             cout << matrix[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
