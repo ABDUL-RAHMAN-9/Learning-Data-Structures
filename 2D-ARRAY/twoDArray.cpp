@@ -210,3 +210,61 @@
 //     }
 //     return 0;
 // }
+
+// ! Maximum Row Sum
+
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+
+// // Returns the maximum sum among all rows in the matrix
+// int getMaxTRowSum(int matrix[][3], int rows, int cols)
+// {
+//     int maxRowSum = INT_MIN; // Initialize with lowest possible int
+
+//     for (int i = 0; i < rows; i++)
+//     {
+//         int rowSum = 0; // Sum of current row
+//         for (int j = 0; j < cols; j++)
+//         {
+//             rowSum += matrix[i][j]; // Add each element
+//         }
+//         maxRowSum = max(maxRowSum, rowSum); // Update max if needed
+//     }
+
+//     return maxRowSum;
+// }
+
+// int getMaxColumnSum(int matrix[][3], int rows, int cols)
+// {
+//     int maxColSum = INT_MIN;
+
+//     for (int j = 0; j < cols; j++) //  loop over columns
+//     {
+//         int colSum = 0;
+//         for (int i = 0; i < rows; i++) //  loop over rows
+//         {
+//             colSum += matrix[i][j]; //  correct indexing
+//         }
+//         maxColSum = max(maxColSum, colSum);
+//     }
+//     return maxColSum;
+// }
+
+// int main()
+// {
+//     int matrix[3][3] =
+//         {{1, 2, 3},
+//          {4, 5, 6},
+//          {7, 8, 9}};
+
+//     int rows = 3;
+//     int cols = 3;
+
+//     cout << "Max Row Sum: " << getMaxTRowSum(matrix, rows, cols) << endl;
+//     cout << "Max Column Sum: " << getMaxColumnSum(matrix, rows, cols) << endl;
+
+//     return 0;
+// }
+
+
