@@ -106,4 +106,83 @@
 //     return 0;
 // }
 
+// ! Word Pattern
 
+// #include <iostream>
+// #include <unordered_map>
+// #include <string>
+// #include <vector>
+// #include <sstream>
+// #include <algorithm>
+
+// using namespace std;
+
+// bool wordPattern(string pattern, string str)
+// {
+//     istringstream iss(str);
+//     vector<string> words;
+//     string word;
+
+//     // step 1 : split string s into words
+//     while (iss >> word)
+//     {
+//         words.push_back(word);
+//     }
+//     if (pattern.length() != words.size())
+//     {
+//         return false; // If the number of words doesn't match the pattern length
+//     }
+
+//     unordered_map<char, string> mapCharToword;
+//     unordered_map<string, char> mapWordToChar;
+
+//     for (int i = 0; i < pattern.length(); i++)
+//     {
+//         char c = pattern[i];
+//         string w = words[i];
+
+//         // step 2 : check if the character is already mapped to a word
+//         if (mapCharToword.find(c) != mapCharToword.end())
+//         {
+//             if (mapCharToword[c] != w)
+//             {
+//                 return false; // Mismatch in mapping
+//             }
+//         }
+//         else
+//         {
+//             mapCharToword[c] = w; // Map character to word
+//         }
+
+//         // step 3 : check if the word is already mapped to a character
+//         if (mapWordToChar.find(w) != mapWordToChar.end())
+//         {
+//             if (mapWordToChar[w] != c)
+//             {
+//                 return false; // Mismatch in mapping
+//             }
+//         }
+//         else
+//         {
+//             mapWordToChar[w] = c; // Map word to character
+//         }
+//     }
+//     return true; // All mappings are consistent
+// }
+
+// int main()
+// {
+//     string pattern = "abba";
+//     string str = "dog cat cat dog";
+
+//     if (wordPattern(pattern, str))
+//     {
+//         cout << "The string follows the pattern." << endl;
+//     }
+//     else
+//     {
+//         cout << "The string does not follow the pattern." << endl;
+//     }
+
+//     return 0;
+// }
