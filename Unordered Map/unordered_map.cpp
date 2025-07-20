@@ -61,3 +61,49 @@
 
 //     return 0;
 // }
+
+// ! First Unique Character in a String
+
+// #include <iostream>
+// #include <unordered_map>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+
+// using namespace std;
+
+// int firstUniqChar(string s)
+// {
+//     unordered_map<char, int> freq;
+
+//     // Count occurrences of each character
+//     for (char ch : s)
+//     {
+//         freq[ch]++;
+//     }
+
+//     // Find the first unique character
+
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if (freq.count(s[i]) && freq[s[i]] == 1)
+//         {
+//             cout << "Index of first unique character: " << i << endl;
+//             cout << "Explanation: '" << s[i] << "' is the first unique character at index " << i << "." << endl;
+
+//             return i;
+//         }
+//     }
+//     cout << "No unique character found." << endl;
+//     return -1;
+// }
+
+// int main()
+// {
+//     string s = "loveleetcode";
+//     firstUniqChar(s);
+
+//     return 0;
+// }
+
+
