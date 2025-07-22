@@ -186,3 +186,56 @@
 
 //     return 0;
 // }
+
+// !  Problem: Find the Difference
+/*
+You have two strings s and t. String t is the same as s but with one
+ extra character added. Your task is to find that extra character.
+ Input: s = "abcd", t = "abcde"
+*/
+
+// #include <iostream>
+// #include <unordered_map>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// char findTheDifference(string s, string t)
+// {
+//     unordered_map<char, int> freq;
+//     // Count occurrences of each character in string s
+//     for (char ch : s)
+//     {
+//         freq[ch]++;
+//     }
+//     // Subtract occurrences of each character in string t
+//     for (char ch : t)
+//     {
+//         if (freq.count(ch) == 0 && freq[ch] == 0)
+//         {
+//             return ch; // Found the extra character
+//         }
+//         freq[ch]--;
+//     }
+//     return '\0'; // No extra character found
+// }
+// int main()
+// {
+//     string s = "abcde";
+//     string t = "abcdef";
+
+//     char extraChar = findTheDifference(s, t);
+//     if (extraChar != '\0')
+//     {
+//         cout << "The extra character is: " << extraChar << endl;
+//     }
+//     else
+//     {
+//         cout << "No extra character found." << endl;
+//     }
+
+//     return 0;
+// }
+
+
