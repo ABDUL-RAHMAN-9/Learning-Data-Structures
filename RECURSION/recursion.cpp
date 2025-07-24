@@ -51,3 +51,23 @@
 
 //     return 0;
 // }
+
+// //! Sum on N Nums
+// #include <iostream>
+// using namespace std;
+
+// int sumOfNums(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     return n + sumOfNums(n - 1);
+// }
+
+// int main()
+// {
+//     cout << sumOfNums(4);
+
+//     return 0;
+// }
