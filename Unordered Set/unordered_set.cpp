@@ -58,8 +58,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // #include <unordered_set>
 
@@ -106,3 +104,33 @@
 // }
 
 
+
+// #include <iostream>
+// #include <vector>
+// #include <unordered_set>
+// #include <algorithm>
+
+// using namespace std;
+
+// void checkCountriePresent(const vector<string> &countries, const string &query)
+// {
+//     // if (countries.find(query) != countries.end())
+//     if (find(countries.begin(), countries.end(), query) != countries.end())
+//     {
+//         cout << "We found the country: " << query << endl;
+//     }
+//     else
+//     {
+//         cout << query << " is NOT in the set" << endl;
+//     }
+// }
+
+// int main()
+// {
+//     vector<string> inputCountries = {"India", "Nepal", "USA", "UK", "India", "Korea", "Germany"};
+//     string query = "UK";
+
+//     checkCountriePresent(inputCountries, query);
+
+//     return 0;
+// }
