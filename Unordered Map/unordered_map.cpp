@@ -238,4 +238,48 @@ You have two strings s and t. String t is the same as s but with one
 //     return 0;
 // }
 
+// // ! unordered_map getting values examples
+// #include <iostream>
+// #include <unordered_map>
 
+// using namespace std;
+
+// int main()
+// {
+//     unordered_map<string, int> map1;
+
+//     map1.insert({{"One", 1},
+//                  {"Two", 2},
+//                  {"Three", 3},
+//                  {"Four", 4},
+//                  {"Five", 5}});
+
+//     //! New version to print map1 use this one
+
+//     for (auto pair : map1)
+//     {
+//         cout << pair.first << " : " << pair.second << endl;
+//     }
+
+//     cout << "Printing using directly unpacks the key-value pair" << endl;
+
+//     for (auto &[key, value] : map1)
+//     {
+//         cout << key << " : " << value << endl;
+//     }
+
+//     // check value exist or not
+//     if (map1.find("Two") != map1.end())
+//     {
+//         cout << "Yes";
+//     }
+//     else
+//     {
+//         cout << "No";
+//     }
+
+
+//     //  or we can use count to find also for check
+//     if(map1.count("Four")) ? cout << "Yes"
+//     return 0;
+// }
