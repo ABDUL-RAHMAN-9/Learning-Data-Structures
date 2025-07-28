@@ -241,45 +241,52 @@ You have two strings s and t. String t is the same as s but with one
 // // ! unordered_map getting values examples
 // #include <iostream>
 // #include <unordered_map>
-
 // using namespace std;
 
 // int main()
 // {
 //     unordered_map<string, int> map1;
 
-//     map1.insert({{"One", 1},
-//                  {"Two", 2},
-//                  {"Three", 3},
-//                  {"Four", 4},
-//                  {"Five", 5}});
+//     // Insert key-value pairs one by one or using initializer list at declaration
+//     map1 = {{"One", 1},
+//             {"Two", 2},
+//             {"Three", 3},
+//             {"Four", 4},
+//             {"Five", 5}};
 
-//     //! New version to print map1 use this one
-
+//     // Print using auto copy
 //     for (auto pair : map1)
 //     {
 //         cout << pair.first << " : " << pair.second << endl;
 //     }
 
-//     cout << "Printing using directly unpacks the key-value pair" << endl;
+//     cout << "Printing using structured bindings:" << endl;
 
+//     // Print using structured bindings (C++17 feature)
 //     for (auto &[key, value] : map1)
 //     {
 //         cout << key << " : " << value << endl;
 //     }
 
-//     // check value exist or not
+//     // Check if "Two" exists
 //     if (map1.find("Two") != map1.end())
 //     {
-//         cout << "Yes";
+//         cout << "\"Two\" found in the map." << endl;
 //     }
 //     else
 //     {
-//         cout << "No";
+//         cout << "\"Two\" not found in the map." << endl;
 //     }
 
+//     // Check if "Four" exists using count()
+//     if (map1.count("Four"))
+//     {
+//         cout << "\"Four\" found in the map." << endl;
+//     }
+//     else
+//     {
+//         cout << "\"Four\" not found in the map." << endl;
+//     }
 
-//     //  or we can use count to find also for check
-//     if(map1.count("Four")) ? cout << "Yes"
 //     return 0;
 // }
