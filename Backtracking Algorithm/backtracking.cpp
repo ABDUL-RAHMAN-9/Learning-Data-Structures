@@ -28,3 +28,36 @@
 
 //     return 0;
 // }
+
+// ! print all permutations of the string "abc"
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// void permutations(string &str, int left, int right)
+
+// {
+//     if (left == right)
+//     {
+//         cout << str << endl;
+//         return;
+//     }
+
+//     for (int i = left; i <= right; i++)
+//     {
+//         swap(str[left], str[i]);
+//         permutations(str, left + 1, right);
+//         swap(str[left], str[i]);
+//     }
+// }
+
+// int main()
+// {
+//     string str = "abc";
+//     permutations(str, 0, str.length() - 1);
+
+//     return 0;
+// }
+
+
