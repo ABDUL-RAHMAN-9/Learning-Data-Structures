@@ -62,35 +62,35 @@
 
 // ! Generate All Subsets of a String
 
-#include <iostream>
-#include <string>
-#include <vector>
+// #include <iostream>
+// #include <string>
+// #include <vector>
 
-using namespace std;
+// using namespace std;
 
-void generateSubsets(string &str, string current, int index, vector<string> &result)
-{
-    if (index == str.size())
-    {
-        result.push_back(current);
-        return;
-    }
-    generateSubsets(str, current + str[index], index + 1, result);
+// void generateSubsets(string &str, string current, int index, vector<string> &result)
+// {
+//     if (index == str.size())
+//     {
+//         result.push_back(current);
+//         return;
+//     }
+//     generateSubsets(str, current + str[index], index + 1, result);
 
-    generateSubsets(str, current, index + 1, result);
-}
+//     generateSubsets(str, current, index + 1, result);
+// }
 
-int main()
-{
-    string str = "abc";
-    vector<string> result;
-    generateSubsets(str, "", 0, result);
+// int main()
+// {
+//     string str = "abc";
+//     vector<string> result;
+//     generateSubsets(str, "", 0, result);
 
-    for (const string &subset : result)
-    {
-        cout << "\"" << subset << "\", ";
-    }
-    return 0;
-}
+//     for (const string &subset : result)
+//     {
+//         cout << "\"" << subset << "\", ";
+//     }
+//     return 0;
+// }
 
 
