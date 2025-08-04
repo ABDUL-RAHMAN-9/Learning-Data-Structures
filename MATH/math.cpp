@@ -36,4 +36,25 @@ sum of its digits each raised to the power of the number of digits.
 //     return 0;
 // }
 
-// ! Reverse a number
+// ! Factorial
+
+// #include <iostream>
+// using namespace std;
+
+// int factorialOfN(int n)
+// {
+//     if (n == 1 || n == 0)
+//     {
+//         return 1;
+
+//     }
+//     return n * factorialOfN(n - 1);
+// }
+// int main()
+// {
+//     int n = 3;
+//     int ans = factorialOfN(n);
+//     cout << ans;
+
+//     return 0;
+// }
