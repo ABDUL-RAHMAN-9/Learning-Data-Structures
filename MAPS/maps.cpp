@@ -31,7 +31,6 @@
 //         cout << it->second << ", ";
 //     }
 
- 
 //     // Erase by key and by iterator
 //     mp.erase(5);
 //     mp.erase(mp.begin()); // erase first element (key=1)

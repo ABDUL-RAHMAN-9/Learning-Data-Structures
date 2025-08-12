@@ -1,6 +1,6 @@
 {
   "debug.console.fontSize": 18,
-  "terminal.integrated.fontSize": 22,
+  "terminal.integrated.fontSize": 18,
   "files.associations": {
     "*.ejs": "html",
     "random": "c",
