@@ -115,3 +115,54 @@
 
 //     return 0;
 // }
+
+// ! Valid Parentheses
+
+// #include <iostream>
+// #include <string>
+// #include <stack>
+// using namespace std;
+// class Solution
+// {
+// public:
+//     bool isValid(string str)
+//     {
+//         stack<char> s;
+
+//         for (char ch : str)
+//         {
+//             if (ch == '{' || ch == '(' || ch == '[')
+//             {
+//                 s.push(ch); // push opening bracket
+//             }
+//             else
+//             {
+//                 if (s.empty())
+//                     return false; // no match available
+
+//                 char top = s.top();
+//                 if ((top == '{' && ch == '}') ||
+//                     (top == '[' && ch == ']') ||
+//                     (top == '(' && ch == ')'))
+//                 {
+//                     s.pop(); // matched, pop it
+//                 }
+//                 else
+//                 {
+//                     return false; // mismatch
+//                 }
+//             }
+//         }
+//         return s.empty(); // valid only if no unmatched brackets remain
+//     }
+// };
+
+// int main()
+// {
+//     Solution sol;
+
+//     string input = "([()]{}])";
+//     cout << "Output: " << boolalpha << sol.isValid(input);
+
+//     return 0;
+// }
