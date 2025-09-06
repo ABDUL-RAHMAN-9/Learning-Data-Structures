@@ -166,3 +166,58 @@
 
 //     return 0;
 // }
+
+//! Build an Array With Stack Operations
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     vector<string> buildArray(vector<int> &target, int n)
+//     {
+//         vector<string> operations;
+//         int stream = 1;
+//         int i = 0;
+
+//         while (stream <= n && i < target.size())
+//         {
+//             if (stream == target[i])
+//             {
+//                 operations.push_back("Push");
+//                 i++;
+//             }
+//             else
+//             {
+//                 operations.push_back("Push");
+//                 operations.push_back("Pop");
+//             }
+//             stream++;
+//         }
+//         return operations;
+//     }
+// };
+
+// int main()
+// {
+//     Solution sol;
+//     vector<int> target = {1, 3};
+//     int n = 3;
+
+//     vector<string> result = sol.buildArray(target, n);
+
+//     cout << "[";
+//     for (int i = 0; i < result.size(); i++)
+//     {
+//         cout << result[i];
+//         if (i != result.size() - 1)
+//         {
+//             cout << ", ";
+//         }
+//     }
+
+//     cout << "]" << endl;
+//     return 0;
+// }
