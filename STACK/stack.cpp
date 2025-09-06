@@ -221,3 +221,77 @@
 //     cout << "]" << endl;
 //     return 0;
 // }
+
+// ! Stock Span Problem
+// ? Problem statement
+/*
+Prices: [100, 80, 60, 70, 60, 75, 85]
+
+Answer (Span): [1, 1, 1, 2, 1, 4, 6]
+
+Meaning:-
+
+Day 1 (100): No previous day → Span = 1
+
+Day 2 (80): Previous price (100) is greater → Span = 1
+
+Day 3 (60): Previous (80,100) are greater → Span = 1
+
+Day 4 (70): Previous day (60) is smaller → Span = 2
+
+Day 5 (60): All previous are higher → Span = 1
+
+Day 6 (75): Previous (60,70,60) are smaller → Span = 4
+
+Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
+*/
+
+// #include <iostream>
+// #include <vector>
+// #include <stack>
+// using namespace std;
+
+// int main()
+// {
+//     // Input: stock prices over days
+//     vector<int> prices = {100, 80, 60, 70, 60, 75, 85};
+//     int n = prices.size();
+
+//     vector<int> span(n, 0); // stores the result
+//     stack<int> s;           // stores indices of prices
+
+//     // Process each day's price
+//     for (int i = 0; i < n; i++)
+//     {
+//         // Remove all smaller or equal prices from stack
+//         while (!s.empty() && prices[s.top()] <= prices[i])
+//         {
+//             s.pop();
+//         }
+
+//         // If no higher price before → span = i + 1
+//         if (s.empty())
+//         {
+//             span[i] = i + 1;
+//         }
+//         else
+//         {
+//             // Else span = difference between today and last higher price
+//             span[i] = i - s.top();
+//         }
+
+//         // Push current day index onto stack
+//         s.push(i);
+//     }
+
+//     // Output the results clearly
+//     cout << "Stock Prices: ";
+//     for (int p : prices)
+//         cout << p << " ";
+//     cout << "\nStock Span:   ";
+//     for (int sp : span)
+//         cout << sp << " ";
+//     cout << endl;
+
+//     return 0;
+// }
