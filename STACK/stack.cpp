@@ -295,3 +295,78 @@ Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
 
 //     return 0;
 // }
+
+//! Delete Middle Element of a Stack
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     // Recursive function to delete middle element
+//     void deleteMid(stack<int> &s, int current, int midIndex)
+//     {
+//         if (s.empty())
+//             return;
+
+//         // If current element is middle, pop it
+//         if (current == midIndex - 1)
+//         {
+//             s.pop();
+//             return;
+//         }
+
+//         // Pop top element and recurse
+//         int topElement = s.top();
+//         s.pop();
+
+//         deleteMid(s, current + 1, midIndex);
+
+//         // Push back the elements after middle is removed
+//         s.push(topElement);
+//     }
+
+//     // Helper function to start recursion
+//     void deleteMid(stack<int> &s)
+//     {
+//         int n = s.size();
+//         int midIndex = (n + 1) / 2; // 1-based index from bottom
+//         deleteMid(s, 0, midIndex);
+//     }
+// };
+
+// // Utility function to print stack (top → bottom)
+// void printStack(stack<int> s)
+// {
+//     while (!s.empty())
+//     {
+//         cout << s.top() << " ";
+//         s.pop();
+//     }
+//     cout << endl;
+// }
+
+// int main()
+// {
+//     Solution sol;
+//     stack<int> s;
+
+//     // Push elements into stack
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(50);
+
+//     cout << "Original stack (top → bottom): ";
+//     printStack(s);
+
+//     // Delete middle element
+//     sol.deleteMid(s);
+
+//     cout << "After deleting middle element (top → bottom): ";
+//     printStack(s);
+
+//     return 0;
+// }
