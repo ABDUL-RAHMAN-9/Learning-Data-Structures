@@ -370,3 +370,59 @@ Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
 
 //     return 0;
 // }
+
+
+//! Program to find the Previous Smaller Element for each element in an array
+
+// #include <iostream>
+// #include <stack>
+// #include <vector>
+// using namespace std;
+
+// // Function to compute previous smaller elements
+// vector<int> findPreviousSmaller(const vector<int> &arr)
+// {
+//     int n = arr.size();
+//     vector<int> result(n, 0);
+//     stack<int> st; // stack to store potential candidates
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         // Remove elements from stack that are >= current element
+//         while (!st.empty() && st.top() >= arr[i])
+//         {
+//             st.pop();
+//         }
+
+//         // If stack becomes empty → no smaller element on left
+//         if (st.empty())
+//         {
+//             result[i] = -1;
+//         }
+//         else
+//         {
+//             result[i] = st.top(); // previous smaller element found
+//         }
+
+//         // Push current element into stack
+//         st.push(arr[i]);
+//     }
+
+//     return result;
+// }
+
+// int main()
+// {
+//     vector<int> arr = {3, 1, 0, 8, 6};
+
+//     vector<int> result = findPreviousSmaller(arr);
+
+//     cout << "Previous Smaller Elements: ";
+//     for (int val : result)
+//     {
+//         cout << val << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
