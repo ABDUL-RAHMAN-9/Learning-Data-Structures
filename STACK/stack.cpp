@@ -371,7 +371,6 @@ Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
 //     return 0;
 // }
 
-
 //! Program to find the Previous Smaller Element for each element in an array
 
 // #include <iostream>
@@ -423,6 +422,60 @@ Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
 //         cout << val << " ";
 //     }
 //     cout << endl;
+
+//     return 0;
+// }
+
+// ! Online Stock Span
+
+// #include <iostream>
+// #include <stack>
+// #include <vector>
+// using namespace std;
+
+// class StockSpanner
+// {
+//     stack<pair<int, int>> s; // stack stores {price, span}
+
+// public:
+//     StockSpanner() {}
+
+//     int next(int price)
+//     {
+//         int span = 1; // every price has at least a span of 1 (itself)
+
+//         // if stack top has a price <= current price,
+//         // it means current price "dominates" those days,
+//         // so we add their spans.
+//         while (!s.empty() && s.top().first <= price)
+//         {
+//             span += s.top().second;
+//             s.pop();
+//         }
+
+//         // store current price with its span
+//         s.push({price, span});
+//         return span;
+//     }
+// };
+
+// int main()
+// {
+//     StockSpanner spanner;
+
+//     // Example stock prices
+//     vector<int> prices = {100, 80, 60, 70, 60, 75, 85};
+
+//     cout << "Stock Span Problem Simulation\n";
+//     cout << "---------------------------------\n";
+
+//     for (int price : prices)
+//     {
+//         int span = spanner.next(price);
+//         cout << "Price: " << price
+//              << " -> Span: " << span
+//              << " (days including today with price <= " << price << ")\n";
+//     }
 
 //     return 0;
 // }
