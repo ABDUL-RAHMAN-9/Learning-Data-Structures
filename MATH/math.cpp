@@ -58,3 +58,38 @@ sum of its digits each raised to the power of the number of digits.
 
 //     return 0;
 // }
+
+// ! digit extraction function for integers
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// vector<int> getDigits(int &num)
+// {
+
+//     vector<int> ans;
+//     while (num > 0)
+//     {
+//         int lastDigit = num % 10;
+//         ans.push_back(lastDigit);
+//         num = num / 10;
+//     }
+//     reverse(ans.begin(), ans.end());
+//     return ans;
+// }
+
+// int main()
+// {
+//     int n = 426;
+
+//     vector<int> ans = getDigits(n);
+//     cout << "Valus after seprating: ";
+//     for (int val : ans)
+//     {
+//         cout << val << ", ";
+//     }
+
+//     return 0;
+// }
