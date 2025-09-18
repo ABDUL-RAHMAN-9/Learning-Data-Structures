@@ -638,10 +638,81 @@
 //     cout << "]" << endl;
 
 //     // Explanation
-//     cout << "\nExplanation:" << endl;
-//     cout << "For 4 -> no greater element to its right in nums2 -> -1" << endl;
-//     cout << "For 1 -> next greater element in nums2 is 3 -> 3" << endl;
-//     cout << "For 2 -> no greater element to its right -> -1" << endl;
+// cout << "\nExplanation:" << endl;
+// cout << "For 4 -> no greater element to its right in nums2 -> -1" << endl;
+// cout << "For 1 -> next greater element in nums2 is 3 -> 3" << endl;
+// cout << "For 2 -> no greater element to its right -> -1" << endl;
 
 //     return 0;
 // }
+
+// ! Previous Greater element
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     vector<int> PreviousGreaterElement(vector<int> &nums1, vector<int> &nums2)
+//     {
+//         vector<int> ans; // to store the result for each element of nums1
+
+//         // Loop through each element in nums1
+//         for (int num : nums1)
+//         {
+//             // Step 1: Find the index of 'num' inside nums2
+//             int j = 0;
+//             while (j < nums2.size() && nums2[j] != num)
+//             {
+//                 j++;
+//             }
+
+//             // Step 2: Look left of 'j' to find previous greater
+//             int prevGreater = -1;            // default = -1 (no greater found)
+//             for (int k = j - 1; k >= 0; k--) // check towards left
+//             {
+//                 if (nums2[k] > num)
+//                 {
+//                     prevGreater = nums2[k];
+//                     break; // stop once found
+//                 }
+//             }
+
+//             // Step 3: Save result
+//             ans.push_back(prevGreater);
+//         }
+//         return ans;
+//     }
+// };
+
+// int main()
+// {
+//     // Input values
+//     vector<int> nums1 = {4, 1, 2};
+//     vector<int> nums2 = {1, 3, 4, 2};
+
+//     Solution sol;
+//     vector<int> result = sol.PreviousGreaterElement(nums1, nums2);
+
+//     // Output
+//     cout << "Input: nums1 = [4,1,2], nums2 = [1,3,4,2]" << endl;
+//     cout << "Output: [";
+//     for (int i = 0; i < result.size(); i++)
+//     {
+//         cout << result[i];
+//         if (i < result.size() - 1)
+//             cout << ",";
+//     }
+//     cout << "]" << endl;
+
+//     // Explanation for each element
+//     cout << "\nExplanation:" << endl;
+//     cout << "For 4 -> no greater element on the left in nums2 -> -1" << endl;
+//     cout << "For 1 -> no greater element on the left in nums2 -> -1" << endl;
+//     cout << "For 2 -> previous greater in nums2 is 4 -> 4" << endl;
+
+//     return 0;
+// }
+
+
