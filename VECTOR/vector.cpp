@@ -573,3 +573,75 @@
 
 //     return 0;
 // }
+
+// ! Leetcode : 496. Next Greater Element I
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
+//     {
+//         vector<int> ans; // to store the result for nums1 elements
+
+//         // Loop through each element in nums1
+//         for (int num : nums1)
+//         {
+//             int j = 0;
+
+//             // Step 1: Find the position of 'num' inside nums2
+//             while (j < nums2.size() && nums2[j] != num)
+//             {
+//                 j++;
+//             }
+
+//             int nextGreater = -1; // default is -1 if no greater element is found
+
+//             // Step 2: From the found position, check the next elements in nums2
+//             for (int k = j + 1; k < nums2.size(); k++)
+//             {
+//                 if (nums2[k] > num)
+//                 {
+//                     nextGreater = nums2[k]; // found next greater
+//                     break;                  // stop after finding the first greater element
+//                 }
+//             }
+
+//             // Step 3: Push result for this number
+//             ans.push_back(nextGreater);
+//         }
+
+//         return ans; // final result
+//     }
+// };
+
+// int main()
+// {
+//     // Input values
+//     vector<int> nums1 = {4, 1, 2};
+//     vector<int> nums2 = {1, 3, 4, 2};
+
+//     Solution sol;
+//     vector<int> result = sol.nextGreaterElement(nums1, nums2);
+
+//     // Output with good understanding
+//     cout << "Input: nums1 = [4,1,2], nums2 = [1,3,4,2]" << endl;
+//     cout << "Output: [";
+//     for (int i = 0; i < result.size(); i++)
+//     {
+//         cout << result[i];
+//         if (i < result.size() - 1)
+//             cout << ",";
+//     }
+//     cout << "]" << endl;
+
+//     // Explanation
+//     cout << "\nExplanation:" << endl;
+//     cout << "For 4 -> no greater element to its right in nums2 -> -1" << endl;
+//     cout << "For 1 -> next greater element in nums2 is 3 -> 3" << endl;
+//     cout << "For 2 -> no greater element to its right -> -1" << endl;
+
+//     return 0;
+// }
