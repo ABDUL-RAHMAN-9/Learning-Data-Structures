@@ -479,3 +479,65 @@ Day 7 (85): Previous (75,60,70,60,80) are smaller → Span = 6
 
 //     return 0;
 // }
+
+// ! Next Greater Element
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
+//     {
+//         stack<int> s;              // stack to keep track of elements
+//         map<int, int> nextGreater; // map stores: element → next greater
+//         vector<int> answer;
+
+//         // Step 1: Process nums2
+//         for (int num : nums2)
+//         {
+//             // If current num is greater, pop from stack until it's not
+//             while (!s.empty() && num > s.top())
+//             {
+//                 int top = s.top();
+//                 s.pop();
+//                 nextGreater[top] = num; // current num is the next greater for popped one
+//             }
+//             s.push(num); // push current num as a candidate
+//         }
+
+//         // Step 2: Remaining stack elements have no next greater
+//         while (!s.empty())
+//         {
+//             nextGreater[s.top()] = -1;
+//             s.pop();
+//         }
+
+//         // Step 3: Build answer for nums1
+//         for (int x : nums1)
+//         {
+//             answer.push_back(nextGreater[x]);
+//         }
+
+//         return answer;
+//     }
+// };
+
+// int main()
+// {
+//     Solution sol;
+
+//     vector<int> nums1 = {4, 1, 2};
+//     vector<int> nums2 = {1, 3, 4, 2};
+
+//     vector<int> result = sol.nextGreaterElement(nums1, nums2);
+
+//     cout << "Output: [ ";
+//     for (int r : result)
+//         cout << r << " ";
+//     cout << "]" << endl;
+
+//     return 0;
+// }
+
+
