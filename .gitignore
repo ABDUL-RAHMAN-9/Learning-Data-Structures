@@ -1,0 +1,10 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Compiled Binaries
+*.exe
+*.o
+*.out
+
+# Ignore Temp Files
+tempCodeRunnerFile*
