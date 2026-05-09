@@ -90,7 +90,7 @@ Learning-Data-Structures/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ABDUL-RAHMAN-9/Learning-Data-Structures.git
+git clone https://github.com/abdul-rahman-0x/Learning-Data-Structures.git
 ```
 
 ### 2. Navigate into a folder
@@ -120,4 +120,4 @@ Suggestions and pull requests are welcome!
 This repository is open‑source and free to use for educational purposes under the **MIT [LICENSE](LICENSE)**.  
 
 ## Project Lead 
-Crafted with passion by **[Abdul Rahman](https://github.com/ABDUL-RAHMAN-9)**  
+Crafted with passion by **[Abdul Rahman](https://github.com/abdul-rahman-0x)**  
