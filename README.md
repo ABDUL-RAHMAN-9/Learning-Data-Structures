@@ -1,4 +1,5 @@
-# Learning Data Structures & Algorithms in C++
+# Data Structures & Algorithms in C++
+
 <p align="center">
   <strong>A practical, ground‑up journey into mastering C++ programming, data structures, and algorithms.</strong>
 </p>
@@ -18,6 +19,7 @@
 ---
 
 ## The Story Behind This Repo
+
 When learning programming, it’s easy to get lost in scattered tutorials and incomplete notes.  
 This repository was built to solve that problem: a single, organized place to practice **every major concept in C++ DSA**.  
 
@@ -41,6 +43,7 @@ It’s designed for learners who want clarity, consistency, and a hands‑on way
 ---
 
 ## Why This Matters
+
 Most learners struggle because resources are scattered. You learn arrays in one place, recursion in another, and STL somewhere else.  
 This repo changes that by giving you **clarity and flow**:
 
@@ -52,6 +55,7 @@ This repo changes that by giving you **clarity and flow**:
 ---
 
 ## Learning Experience
+
 This repo answers the questions learners actually ask:
 
 - "How do I implement this concept in C++?"  
@@ -80,6 +84,7 @@ Learning-Data-Structures/
 ```
 
 ## Technology Stack
+
 - **Language:** C++  
 - **Compiler:** g++ / clang++  
 - **Libraries:** Standard Template Library (STL)  
@@ -90,13 +95,13 @@ Learning-Data-Structures/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/abdul-rahman-0x/Learning-Data-Structures.git
+git clone https://github.com/abdul-rahman-0x/data-structures-algorithms.git
 ```
 
 ### 2. Navigate into a folder
 
 ```bash
-cd Learning-Data-Structures/23-BitManipulation
+cd data-structures-algorithms/23-BitManipulation
 ```
 
 ### 3. Compile and run
@@ -107,17 +112,21 @@ g++ bit_manipulation.cpp -o bitplay
 ```
 
 ## Goals
+
 - Build strong foundations in C++ programming  
 - Practice DSA concepts with real examples  
 - Prepare for coding interviews and competitive programming  
 
 ## Contribution
+
 Feel free to fork, explore, and contribute improvements.  
 Suggestions and pull requests are welcome!  
 
 
 ## License
+
 This repository is open‑source and free to use for educational purposes under the **MIT [LICENSE](LICENSE)**.  
 
-## Project Lead 
+## Author 
+
 Crafted with passion by **[Abdul Rahman](https://github.com/abdul-rahman-0x)**  
